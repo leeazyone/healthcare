@@ -1,7 +1,7 @@
 *{
   margin: 0;
   padding: 0;
-  list-style: none;
+  width: 1200px;
 }
 
 /*Header.js*/
@@ -28,15 +28,15 @@
   display:inline-block;
 }
 
-.header ul li:not(.sub-game li){
+.header ul li:not(.subgame li){
   padding: 10px 50px 10px 50px;
 }
 
-.header ul li:hover a:not(.sub-game a){
+.header ul li:hover a:not(.subgame a){
   color: pink;
 }
 
-.sub-game li:hover a{
+.subgame li:hover a{
   color:pink;
 }
 
@@ -48,12 +48,13 @@
   border: 1px black solid;
 }
 
-.sub-game li{
+.subgame li{
   padding: 10px 20px 10px 20px;
 }
 
 .header ul li:hover ul{
   display: block;
+  transition-duration: 3s;
 }
 
 /* Home.js */
@@ -62,20 +63,72 @@
 }
 
 .home h1{
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .dementia{
-  display: table;
+  display: flex;
+  align-items: center;
 }
 
 .dementia img{
   width: 500px;
   height: 300px;
+  margin-left: 15%;
+  border: 1px silver solid;
 }
 
 .dementia span{
-  display: table-cell;
-  vertical-align: middle;
+  margin-left: 2%;
+  font-size: 20px;
+  width: 45%;
 }
 
+.home p:not(.earlytreatment p){
+  text-align: left;
+  margin-left: 16%;
+  margin-top: 50px;
+}
+
+.earlytreatment{
+  text-align: left;
+  margin-left: 16%;
+}
+
+.treatment{
+  margin-top: 10%;
+  font-size: 25px;
+  color: indianred;
+  text-shadow: 1px 1px 1.2px midnightblue;
+}
+
+.earlytreatment{
+  width: 70%;
+}
+
+.earlysymptoms p{
+  margin: 10px 0 10px 0;
+  font-size: 20px;
+}
+
+.earlytreatment ol{
+  margin-left: 35px;
+}
+
+.earlytreatment ul{
+  margin: 10px;
+}
+
+.dementia_img1{
+  width: 300px;
+  position:relative;
+  top: -950px;
+  left: 850px;
+}
+
+.dementia_img2{
+  width: 300px;
+  position:relative;
+  top: -600px;
+  left: 550px;
+}

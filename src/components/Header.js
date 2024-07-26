@@ -1,13 +1,12 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Header() {
   return <div className="header">
     <h2><Link to="/">HealthCare</Link></h2>
     <ul>
-      <li>
+      <li className="game">
         게임
-        <ul className="sub-game">
+        <ul className="subgame">
           <li><Link to="/Gugudan">구구단</Link></li>
           <li><Link to="/Capital">수도 맞히기</Link></li>
         </ul>
