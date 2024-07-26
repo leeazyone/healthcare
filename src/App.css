@@ -1,38 +1,81 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*Header.js*/
+.header a{
+  text-decoration: none;
+  color : black;
+}
+
+.header{
+  border: 1px solid black;
+  border-color: white white black white;
+  text-align: center;
+  padding: 10px 30px 0 30px;
+}
+
+
+.header ul{
+  display:inline-block;
+  padding : 5px;
+  position: relative;
+}
+
+.header ul li{
+  display:inline-block;
+}
+
+.header ul li:not(.sub-game li){
+  padding: 10px 50px 10px 50px;
+}
+
+.header ul li:hover a:not(.sub-game a){
+  color: pink;
+}
+
+.sub-game li:hover a{
+  color:pink;
+}
+
+.header ul li ul{
+  display:none;
+  position:absolute;
+  left: -4%;
+  margin-top: 15px;
+  border: 1px black solid;
+}
+
+.sub-game li{
+  padding: 10px 20px 10px 20px;
+}
+
+.header ul li:hover ul{
+  display: block;
+}
+
+/* Home.js */
+.home{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home h1{
+  margin-top: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dementia{
+  display: table;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.dementia img{
+  width: 500px;
+  height: 300px;
 }
 
-.App-link {
-  color: #61dafb;
+.dementia span{
+  display: table-cell;
+  vertical-align: middle;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

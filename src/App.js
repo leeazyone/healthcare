@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+/*import Footer from "./components/Footer";*/
+import TeleHealth from "./components/TeleHealth";
+import News from "./components/News";
+import Login from "./components/Login";
+import Join from "./components/Join";
+import Home from "./components/Home";
+import Gugudan from "./components/Gugudan";
+import Capital from "./components/Capital";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header />
+        {/* 경로 및 컴포넌트 정의 */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/TeleHealth" element={<TeleHealth />} />
+          <Route path="/News" element={<News />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Join" element={<Join />} />
+          <Route path="/Gugudan" element={<Gugudan />} />
+          <Route path="/Capital" element={<Capital />} />
+        </Routes>
+        {/* <Footer /> */}
+      </Router>
     </div>
   );
 }
