@@ -3,27 +3,32 @@ import dementia1 from "../img/대한민국 치매현황2023_65세이상 추정�
 import dementia2 from "../img/대한민국 치매현황2023_연도별 추정치매환자수 및 유병률_중앙치매센터.png"
 import dementia_img1 from "../img/dementia1.jpg"
 import dementia_img2 from "../img/dementia2.jpg"
+import prevention_img from "../img/치매예방수칙333.jpg"
 
 export default function Home() {
   return <div className="home">
-    <h1>고령화사회의 적, 치매</h1>
-    <p className="graphename">65세 이상 추정치매환자 및 중증도별 현황</p>
-    <div className="dementia">
-      <img src={dementia1} alt="65세이상 추정치매환자 및 중증도별 현황"/>
-      <span>지난 5년간 65세 이상 중증도별 추정치매환자 추이를 살펴보면 경도치매환자가 가장 많고, 중증치매환자가 가장 적음</span>
-    </div>
+    <div className="main">
+      <h1>고령화사회의 적, 치매</h1>
+      <p className="graphename">65세 이상 추정치매환자 및 중증도별 현황</p>
+      <div className="dementia">
+        <img src={dementia1} alt="65세이상 추정치매환자 및 중증도별 현황"/>
+        <span>지난 5년간 65세 이상 중증도별 추정치매환자 추이를 살펴보면 경도치매환자가 가장 많고, 중증치매환자가 가장 적음</span>
+      </div>
 
-    <p className="graphename">연도별 추정채미환자수 및 유병률</p>
-    <div className="dementia">
-      <img src={dementia2} alt="연도별 추정치매환자수 및 유병률"/>
-      <span>전국 60세 이상 추정치매환자지수는 2018년 약 77만명, 2019년 약 82만명, 2020년 약 86만명, 2021년 약 91만명, 2022년 약 96만명으로 매년 약 5만명씩 증가하는 추세
-      <br /><br />
-      전국 65세 이상 추정치매환자지수는 2018년 약 75만명, 2019년 약 79만명, 2020년 약 84만명, 2021년 약 89만명, 2022년 약 94만명으로 매년 약 5만명씩 증가하는 추세</span>
+      <p className="graphename">연도별 추정채미환자수 및 유병률</p>
+      <div className="dementia">
+        <img src={dementia2} alt="연도별 추정치매환자수 및 유병률"/>
+        <span>전국 60세 이상 추정치매환자지수는 2018년 약 77만명, 2019년 약 82만명, 2020년 약 86만명, 2021년 약 91만명, 2022년 약 96만명으로 매년 약 5만명씩 증가하는 추세
+        <br /><br />
+        전국 65세 이상 추정치매환자지수는 2018년 약 75만명, 2019년 약 79만명, 2020년 약 84만명, 2021년 약 89만명, 2022년 약 94만명으로 매년 약 5만명씩 증가하는 추세</span>
+      </div>
     </div>
 
     <div className="earlytreatment">
       <p className="treatment">치매, 조기 치료가 중요합니다!</p>
       <div className="earlysymptoms">
+        <img src={dementia_img1} alt="치매증상 이미지1" className="dementia_img1"/>
+        <img src={dementia_img2} alt="치매증상 이미지2" className="dementia_img2"/>
         <p>치매 초기 증상</p>
         <ol>
           <li>기억장애
@@ -41,12 +46,7 @@ export default function Home() {
               <li>하고 싶은 말이나 표현이 금방 떠오르지 않고 물건 이름이 잘 생각나지 않습니다.</li>
               <li>책을 읽을 때도 같은 문장을 여러번 반복해서 읽어야 이해가 됩니다.</li>
               <li>심한 경우에는 신문이나 잡지를 읽을 때 이야기 줄거리를 파악하지 못합니다.</li>
-              <li>말귀를 잘 못알아 듣습니다. 청력저하에 의한 증상일 수도 있지만 치매의 초기증상일 수 있으니 주의깊게<br /> 보셔야 합니다</li>
-            </ul>
-          </li>
-          <li>시, 공간능력저하
-            <ul>
-              <li>방향감각이 떨어져서 길을 잃거나 자주 가던 곳도 가지 못하고 헤매는 경우가 있고, 심한 경우 집 안에서도 <br />화장실을 못 찾고 헤매게 됩니다.</li>
+              <li>말귀를 잘 못알아 듣습니다. 청력저하에 의한 증상일 수도 있지만 치매의 초기증상일 수 있으니 주의깊게 보셔야 합니다.</li>
             </ul>
           </li>
           <li>계산 능력 저하
@@ -66,17 +66,19 @@ export default function Home() {
           </li>
           <li>이상행동
             <ul>
-              <li>'누군가 자기 자신의 물건을 훔쳐갔다.', '배우자가 바람을 핀다.', '남이 나를 해치려한다.' 는 등의 망상을 보이는 경우가 있습니다.</li>
-              <li>때리거나 고함을 지르거나 욕설을 하는 등의 공격적인 행동을 보이기도 합니다.</li>
-              <li>집안을 왔다갔다 하면서 옷을 입었다 벗었다 하거나 장롱이나 서랍에 있는 모든 옷을 꺼내서 다개어서 다시 넣었다가 또 꺼내서 정리하는 반복적인 행동을 보이는 경우도 있습니다.</li>
               <li>쓸데없이 바깥을 배회하는 증상을 보이기도 합니다.</li>
+              <li>때리거나 고함을 지르거나 욕설을 하는 등의 공격적인 행동을 보이기도 합니다.</li>
+              <li>'누군가 자기 자신의 물건을 훔쳐갔다.', '배우자가 바람을 핀다.', '남이 나를 해치려한다.' 는 등의 망상을 보이는 경우가 있습니다.</li>
+              <li>집안을 왔다갔다 하면서 옷을 입었다 벗었다 하거나 장롱이나 서랍에 있는 모든 옷을 꺼내서 다개어서 다시 넣었다가 또 꺼내서 정리하는 반복적인 행동을 보이는 경우도 있습니다.</li>
             </ul>
           </li>
         </ol>
-        <img src={dementia_img1} alt="치매증상 이미지1" className="dementia_img1"/>
-        <img src={dementia_img2} alt="치매증상 이미지2" className="dementia_img2"/>
       </div>
-      
+    </div>
+
+    <div className="prevention">
+      <span className="prevention333">치매 예방 수칙 333</span><br />
+      <img src={prevention_img} alt="치매 예방 수칙 333" className="prevention_img" />
     </div>
   </div>;
 }

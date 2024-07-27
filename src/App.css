@@ -42,7 +42,7 @@
 .header ul li ul{
   display:none;
   position:absolute;
-  left: -4%;
+  left: 0%;
   margin-top: 15px;
   border: 1px black solid;
 }
@@ -64,6 +64,7 @@
 .home h1{
   margin-top: 50px;
 }
+
 
 .dementia{
   display: flex;
@@ -92,6 +93,7 @@
 .earlytreatment{
   text-align: left;
   margin-left: 16%;
+  width: 70%;
 }
 
 .treatment{
@@ -101,8 +103,8 @@
   text-shadow: 1px 1px 1.2px midnightblue;
 }
 
-.earlytreatment{
-  width: 70%;
+.earlysymptoms{
+  position: relative;
 }
 
 .earlysymptoms p{
@@ -115,19 +117,46 @@
 }
 
 .earlytreatment ul{
-  margin: 10px;
+  margin: 20px;
 }
 
 .dementia_img1{
-  width: 300px;
-  position:relative;
-  top: -950px;
-  left: 850px;
+  width: 290px;
+  position:absolute;
+  right: 0;
+  top: 50px;
 }
 
 .dementia_img2{
-  width: 300px;
-  position:relative;
-  top: -600px;
-  left: 550px;
+  width: 270px;
+  position:absolute;
+  right: 0;
+  top: 370px;
+}
+
+.prevention_img{
+  border: 1px silver solid;
+  border-radius: 30px;
+  padding: 30px;
+  width: 450px;
+}
+
+.prevention333{
+  font-size: 25px;
+  text-shadow: 1px 1px 1.2px midnightblue;
+  display: inline-block;
+  position: relative;
+  margin: 80px 0 50px 0;
+}
+
+.prevention333::after{
+  content: "";
+  width: 100%;
+  height: 10px;
+  background: #99fee7;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  bottom: 1px;
+  z-index: -1;
 }
