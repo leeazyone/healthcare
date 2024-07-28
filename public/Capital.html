@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수도 맞추기 게임</title>
+    <link rel="stylesheet" href="Capital.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>수도 맞추기 게임</h1>
+      <div class="label-container">
+        <label for="difficulty">난이도 선택:</label>
+        <select id="difficulty">
+          <option value="easy">쉬움</option>
+          <option value="medium">중간</option>
+          <option value="hard">어려움</option>
+        </select>
+      </div>
+      <img id="flag" src="" alt="국기" class="flag" />
+      <div id="question" data-index=""></div>
+      <input type="text" id="answer" placeholder="여기에 답을 입력하세요" />
+      <button id="submit">제출</button>
+      <div id="result"></div>
+      <button id="next">다음 질문</button>
+      <div id="score">점수: 0</div>
+    </div>
+    <script src="Capital.js"></script>
+  </body>
+</html>
