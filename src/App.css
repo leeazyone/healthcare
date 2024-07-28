@@ -1,310 +1,122 @@
-*{
+/* Header.js */
+.header {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h2 {
   margin: 0;
+}
+
+.header ul {
+  list-style: none;
   padding: 0;
+  display: flex;
+  gap: 19px;
 }
 
-/*Header.js*/
-.header a{
-  text-decoration: none;
-  color : black;
-}
-
-.header{
-  border: 1px solid black;
-  border-color: white white black white;
-  text-align: center;
-  padding: 10px 30px 0 30px;
-}
-
-
-.header ul{
-  display:inline-block;
-  padding : 5px;
+.header li {
   position: relative;
 }
 
-.header ul li{
-  display:inline-block;
+.header a, .header li {
+  text-decoration: none;
+  color: #007bff;
 }
 
-.header ul li:not(.subgame li){
-  padding: 10px 50px 10px 50px;
+.header .subgame {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.header ul li:hover a:not(.subgame a){
-  color: pink;
-}
-
-.subgame li:hover a{
-  color:pink;
-}
-
-.header ul li ul{
-  display:none;
-  position:absolute;
-  left: 0%;
-  margin-top: 15px;
-  border: 1px black solid;
-}
-
-.subgame li{
-  padding: 10px 20px 10px 20px;
-}
-
-.header ul li:hover ul{
+.header .game:hover .subgame {
   display: block;
-  transition-duration: 3s;
+}
+
+.header .subgame li {
+  padding: 5px 10px;
 }
 
 /* Home.js */
-.home{
-  text-align: center;
+.home {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.home h1{
-  margin-top: 50px;
+.main h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
-
-.dementia{
-  display: flex;
-  align-items: center;
-}
-
-.dementia img{
-  width: 500px;
-  height: 300px;
-  margin-left: 15%;
-  border: 1px silver solid;
-}
-
-.dementia span{
-  margin-left: 2%;
-  font-size: 20px;
-  width: 45%;
-}
-
-.home p:not(.earlytreatment p){
-  text-align: left;
-  margin-left: 16%;
-  margin-top: 50px;
-}
-
-.earlytreatment{
-  text-align: left;
-  margin-left: 16%;
-  width: 70%;
-}
-
-.treatment{
-  margin-top: 10%;
-  font-size: 25px;
-  color: indianred;
-  text-shadow: 1px 1px 1.2px midnightblue;
-}
-
-.earlysymptoms{
-  position: relative;
-}
-
-.earlysymptoms p{
-  margin: 10px 0 10px 0;
-  font-size: 20px;
-}
-
-.earlytreatment ol{
-  margin-left: 35px;
-}
-
-.earlytreatment ul{
-  margin: 20px;
-}
-
-.dementia_img1{
-  width: 290px;
-  position:absolute;
-  right: 0;
-  top: 50px;
-}
-
-.dementia_img2{
-  width: 270px;
-  position:absolute;
-  right: 0;
-  top: 370px;
-}
-
-.prevention_img{
-  border: 1px silver solid;
-  border-radius: 30px;
-  padding: 30px;
-  width: 450px;
-}
-
-.prevention333{
-  font-size: 25px;
-  text-shadow: 1px 1px 1.2px midnightblue;
-  display: inline-block;
-  position: relative;
-  margin: 80px 0 50px 0;
-}
-
-.prevention333::after{
-  content: "";
-  width: 100%;
-  height: 10px;
-  background: #99fee7;
-  position: absolute;
-  display: inline-block;
-  left: 0;
-  bottom: 1px;
-  z-index: -1;
-}
-
-/* Capital.jsx */
-/* 전체 배경 스타일 */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-/* 컨테이너 스타일 */
-.container {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 15px;
-  text-align: center;
-  width: 90%;
-  max-width: 450px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
-/* 제목 스타일 */
-h1 {
-  margin-bottom: 20px;
-  color: #343a40;
-  font-size: 2.5em;
-  font-weight: bold;
-}
-
-/* 레이블 및 선택 박스 스타일 */
-.label-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-label {
+.main .graphename {
   font-size: 1.2em;
-  color: #495057;
-  margin-right: 10px;
-}
-
-select {
-  padding: 10px;
-  font-size: 1em;
-  color: #495057;
-  border: 2px solid #ced4da;
-  border-radius: 5px;
-  background-color: #ffffff;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-select:focus {
-  border-color: #80bdff;
-  outline: none;
-  box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
-}
-
-/* 질문 텍스트 스타일 */
-#question {
-  margin: 20px 0;
-  font-size: 1.8em;
-  color: #495057;
-}
-
-/* 입력 상자 스타일 */
-#answer {
-  width: calc(100% - 24px);
-  padding: 12px;
-  margin-bottom: 20px;
-  font-size: 1em;
-  color: #495057;
-  border: 2px solid #ced4da;
-  border-radius: 5px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#answer:focus {
-  border-color: #80bdff;
-  outline: none;
-  box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
-}
-
-/* 버튼 스타일 */
-button {
-  padding: 12px 20px;
-  margin: 10px 5px;
-  font-size: 1em;
-  color: #ffffff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
-  display: inline-block;
-  min-width: 120px;
-}
-
-button:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-button:active {
-  transform: translateY(0);
-}
-
-/* 결과 및 점수 텍스트 스타일 */
-#result {
-  margin-top: 15px;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #dc3545;
-  min-height: 30px;
-}
-
-#score {
   margin-top: 20px;
-  font-size: 1.8em;
-  font-weight: bold;
-  color: #28a745;
+  margin-bottom: 10px;
 }
 
-/* 국기 이미지 스타일 */
-.flag {
-  width: 120px;
-  height: auto;
+.dementia {
   margin-bottom: 20px;
-  border: 2px solid #ced4da;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.flag:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+.dementia img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.dementia span {
+  display: block;
+  font-size: 1em;
+}
+
+.earlytreatment .treatment {
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.earlysymptoms {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.earlysymptoms img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.earlysymptoms ol {
+  padding-left: 20px;
+}
+
+.earlysymptoms li {
+  margin-bottom: 10px;
+}
+
+.prevention {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.prevention333 {
+  font-size: 1.5em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.prevention_img {
+  max-width: 100%;
+  height: auto;
 }
