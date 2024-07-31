@@ -28,7 +28,7 @@ const Gugudan = () => {
 
   return (
     <div className='Gugudan'>
-      <h1>구구단 게임!</h1>
+      <h1>구구단 게임</h1>
       <div id='problem'>
         {`${problem.multiplicand} x ${problem.multiplier}`}
       </div>
